@@ -214,7 +214,7 @@ h1, h2, h3, h4, p, figure, blockquote { margin: 0; }
 .stats-inner { max-width: var(--container-max); margin: -56px auto 0; position: relative; z-index: 2; }
 .stats-grid {
   background: var(--surface-dark); border-radius: var(--radius-lg); box-shadow: var(--shadow-card-hover);
-  display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); padding: 36px 8px;
+  display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); padding: 36px 8px;
 }
 .stats-grid > div { padding: 6px 24px; min-width: 0; }
 .stats-grid > div + div { border-left: 1px solid var(--border-on-dark); }
@@ -524,9 +524,8 @@ h1, h2, h3, h4, p, figure, blockquote { margin: 0; }
 }
 @media (max-width: 768px) {
   .hero__content { padding: 96px var(--container-pad-x) 120px; }
-  .stats-grid { grid-template-columns: repeat(2, minmax(0,1fr)); row-gap: 28px; }
-  .stats-grid > div + div { border-left: none; }
-  .stats-grid > div:nth-child(3), .stats-grid > div:nth-child(4) { border-left: none; }
+  .stats-grid { grid-template-columns: repeat(3, minmax(0,1fr)); row-gap: 28px; }
+  .stats-grid > div + div { border-left: 1px solid var(--border-on-dark); }
 }
 @media (max-width: 700px) {
   .services-grid { grid-template-columns: 1fr; }
@@ -536,6 +535,9 @@ h1, h2, h3, h4, p, figure, blockquote { margin: 0; }
 }
 @media (max-width: 640px) {
   .footer__cols { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: 1fr; padding: 18px; gap: 0; }
+  .stats-grid > div { padding: 16px 4px; }
+  .stats-grid > div + div { border-left: none; border-top: 1px solid var(--border-on-dark); }
 }
 @media (max-width: 520px) {
   :root {
@@ -562,9 +564,6 @@ h1, h2, h3, h4, p, figure, blockquote { margin: 0; }
   .hero__cta { display: grid; grid-template-columns: 1fr; gap: 12px; margin-top: 28px; max-width: 320px; }
   .stats-wrap { padding: 0 10px; }
   .stats-inner { margin-top: -38px; }
-  .stats-grid { grid-template-columns: 1fr; padding: 18px; gap: 0; }
-  .stats-grid > div { padding: 16px 4px; }
-  .stats-grid > div + div { border-top: 1px solid var(--border-on-dark); }
   .stat { gap: 14px; }
   .stat__icon { width: 46px; height: 46px; }
   .stat__value { font-size: 40px; }
